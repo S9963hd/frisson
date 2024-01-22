@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+body{
+  background-color:rgba(0,0,0,0.9);
+  width:100vw;
+  overflow-x:hidden;
+  flex-wrap: wrap;
+}
+
+.themefont{
+  font-family: 'Oswald', sans-serif;
+}
+.gradientText{
+  background: -webkit-linear-gradient(45deg, beige 0%, grey 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.navOption{
+  text-decoration:none;
+  font-size: large;
+}
+.navOption:hover,.navOption:active{
+  text-decoration:none;
+  color:'white';
+  border-bottom: white;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+/* Track */
+input::-moz-range-track,::-webkit-slider-runnable-track {
+  -moz-appearance: none;
+  height: 2px;
+  background: linear-gradient(to right, grey, grey);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+input::-moz-range-thumb,::-webkit-slider-thumb {
+  height: 20px;
+  background-color: grey; /* Customize thumb color */
+  border: 2px solid #ffffff; /* Customize thumb border */
+  border-radius: 50%;
+  cursor: pointer;
+}
+.animeText{
+  z-index:-1;
+  animation: fadeInOut 6s ease; /* Adjust the duration as needed */
+}
+.nav:hover{
+  text-shadow: 0px 0px 5px white;
+  border-bottom: 5px solid white;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
