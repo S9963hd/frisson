@@ -6,11 +6,11 @@ import axios  from 'axios';
 import ReactAudioPlayer from 'react-audio-player';
 export default function Main(){
     return (
-        <>
+        <div style={{height:'200vh'}}>
             <div className="row p-4 border-bottom" style={{position:'sticky',top:0,background:'rgb(25,25,25,0.9)'}}>
                 <i className="col-2 display-3 themefont gradientText" style={{flexWrap:'wrap'}}>FRISSON</i>           
                 <div className="col-6 mt-4"><Navigation /></div>
-                <div className="col-4 ">
+                <div className="col-4 " style={{zIndex:1}}>
                 <NavigationOption/>
                 </div>
             </div >
@@ -28,7 +28,7 @@ export default function Main(){
             {/* <div className="row">
                 <Track/>
             </div> */}
-            <div className="row" style={{position:'relative'}}>
+            <div className="row" >
                 <MusicContent/>
             </div>
             <div className="row justify-content-around" >
@@ -39,7 +39,7 @@ export default function Main(){
                 <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/>
                <ReactAudioPlayer controls src={require("C:/Users/sanjay/Music/Give It to Me a-Train.mp3")} className="col-11"/>
             </div>
-        </>
+        </div>
     )
 }
 function Navigation(){
