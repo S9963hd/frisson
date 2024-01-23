@@ -27,6 +27,10 @@ app.post('/SignIn',async(req,res)=>{
         }
     })
 })
+app.get('/song',async(req,res)=>{
+    let sample=await axios('https://app.box.com/s/q3rbw9prdb89u3qc3vhwuoe3bm5lvwj0').then(result=>result.data).catch(err=>console.log("Sample"));
+    
+})
 //Schema for Authentication
 let Schema=new mongoose.Schema({
     name:{type:'string',required:true},

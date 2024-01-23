@@ -80,3 +80,26 @@ input::-moz-range-thumb,::-webkit-slider-thumb {
     opacity: 1;
   }
 }
+/* AudioPlayer.css */
+
+.audio-player-container {
+  width: 300px;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the progress bar */
+.react-audio-player audio::-webkit-media-controls-timeline {
+  background-color: red; /* Set your desired track color */
+}
+
+.react-audio-player audio::-moz-range-track {
+  background-color: yellowgreen; /* Set your desired track color */
+}
+
+.react-audio-player audio::-ms-fill-lower {
+  background-color: purple; /* Set your desired track color */
+}
+/* Customize other styles as needed */

@@ -1,7 +1,9 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Track from './Track';
 import { useNavigate } from 'react-router-dom';
 import MusicContent from './Music';
+import axios  from 'axios';
+import ReactAudioPlayer from 'react-audio-player';
 export default function Main(){
     return (
         <>
@@ -32,6 +34,10 @@ export default function Main(){
             <div className="row justify-content-around" >
                 <a href="mailto:sanjaymajestic143@gmail.com" className="gradientText col-4 text-center" style={{textDecoration:'none'}}><img src="Mail.svg" style={{height:'7vh'}}/></a>
                 <a href="https://www.instagram.com/sanj.ay1237659/" className="gradientText col-4 text-center" style={{textDecoration:'none'}}><img src="Instagram.svg" style={{height:'7vh'}}/></a>
+            </div>
+            <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
+                <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/>
+               <ReactAudioPlayer controls src={require("C:/Users/sanjay/Music/Give It to Me a-Train.mp3")} className="col-11"/>
             </div>
         </>
     )
