@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 export default function MusicContent(){
     const [songs,setSongs]=useState([]);
-    return(<div className="row" style={{zIndex:-1}}>
+    return(<div className="row" >
             <h1 className="ms-5 themefont gradientText" >Featured On</h1>
             <hr className="text-white gradientText"></hr>
             <ul className="col-10 m-2 mx-auto" style={{display:'flex',overflowX:'auto',width:'80vw'}}>

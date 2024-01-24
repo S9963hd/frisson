@@ -5,12 +5,16 @@ import MusicContent from './Music';
 import axios  from 'axios';
 import ReactAudioPlayer from 'react-audio-player';
 export default function Main(){
+    const [song, setSong] = useState(null);
+    useEffect(()=>{
+        axios('http://127.0.0.1:5500/song').then(result=>{setSong(result.data)}).catch(err=>console.log("Error"));
+    },[])
     return (
-        <div style={{height:'200vh'}}>
+        <div  style={{height:'170vh'}}>
             <div className="row p-4 border-bottom" style={{position:'sticky',top:0,background:'rgb(25,25,25,0.9)'}}>
                 <i className="col-2 display-3 themefont gradientText" style={{flexWrap:'wrap'}}>FRISSON</i>           
                 <div className="col-6 mt-4"><Navigation /></div>
-                <div className="col-4 " style={{zIndex:1}}>
+                <div className="col-4 ">
                 <NavigationOption/>
                 </div>
             </div >
@@ -37,7 +41,8 @@ export default function Main(){
             </div>
             <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
                 <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/>
-               <ReactAudioPlayer controls src={require("C:/Users/sanjay/Music/Give It to Me a-Train.mp3")} className="col-11"/>
+               <ReactAudioPlayer controls src={song} className="col-11" type="audio/mp3"/>
+               
             </div>
         </div>
     )
@@ -45,7 +50,7 @@ export default function Main(){
 function Navigation(){
     return (
         <>
-            <div className="input-group">
+            <div className="input-group" style={{zIndex:1}}>
                 <input type="text" className="form-control" placeholder="🎵 Explore Songs"/>
                 <btn className='btn btn-secondary material-symbols-outlined'>search</btn>
             </div>
