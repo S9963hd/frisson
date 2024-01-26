@@ -24,7 +24,7 @@ export default function Playlist(){
 export function File({playlist}){
     return (
         <div className="col-2 rounded p-3 m-3" style={{boxShadow:'0px 0px 5px grey',cursor:'pointer'}}>
-            <img src='default.svg' className='img-fluid bg-dark p-2'/>
+            <img src='Default.svg' className='img-fluid bg-dark p-2'/>
             <h4 className="gradientText themefont text-center">{playlist.name==undefined?'PlayList':playlist.name}</h4>
         </div>
     )
