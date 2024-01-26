@@ -3,22 +3,23 @@ import Track from './Track';
 import { useNavigate } from 'react-router-dom';
 import MusicContent from './Music';
 import axios  from 'axios';
-import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 export default function Main(){
     const [song, setSong] = useState(null);
     useEffect(()=>{
-        axios('http://127.0.0.1:5500/song').then(result=>{setSong(result.data)}).catch(err=>console.log("Error"));
-    },[])
+    axios('http://localhost:5500/song').then(data=>console.log("Data Fetching")).catch(err=>console.log('Error At Fetching'));
+})
     return (
-        <div  style={{height:'170vh'}}>
-            <div className="row p-4 border-bottom" style={{position:'sticky',top:0,background:'rgb(25,25,25,0.9)'}}>
-                <i className="col-2 display-3 themefont gradientText" style={{flexWrap:'wrap'}}>FRISSON</i>           
+        <div  style={{height:'170vh'}} >
+            <div className="row p-4 border-bottom" style={{position:'sticky',top:0,background:'rgb(25,25,25,0.9)',zIndex:1}}>
+                <i className="col-sm-4 col-2 display-3 themefont gradientText flex-wrap">FRISSON</i>           
                 <div className="col-6 mt-4"><Navigation /></div>
                 <div className="col-4 ">
                 <NavigationOption/>
                 </div>
             </div >
-            <div className="row " style={{position:'sticky',top:'127px',background:'rgb(25,25,25,0.9)'}}>
+            <div className="row " style={{position:'sticky',top:'127px',background:'rgb(25,25,25,0.9)',zIndex:1}}>
                     <SideOption/>
             </div>
             <div className="row justify-content-center">
@@ -41,7 +42,14 @@ export default function Main(){
             </div>
             <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
             <img src="Default.svg" className='col-1'/>
-                <ReactAudioPlayer src='https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=drive_link' controls className="col-11 " id='audio'/>
+            <div className="col-11">
+            <AudioPlayer
+            className="bg-dark col-11"
+          src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
+          volume={0.5}
+          // Try other props!
+        />
+        </div>
             </div>
         </div>
     )
@@ -49,10 +57,11 @@ export default function Main(){
 function Navigation(){
     return (
         <>
-            <div className="input-group" style={{zIndex:1}}>
+            <div className="col-sm-none input-group" style={{zIndex:1}}>
                 <input type="text" className="form-control" placeholder="🎵 Explore Songs"/>
                 <btn className='btn btn-secondary material-symbols-outlined'>search</btn>
             </div>
+            <div className="col-lg-none fa-solid fa-search"></div>
         </>
     )
 }
