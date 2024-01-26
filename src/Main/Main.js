@@ -13,7 +13,7 @@ export default function Main(){
     return (
         <div  style={{height:'170vh'}} >
             <div className="row p-4 border-bottom" style={{position:'sticky',top:0,background:'rgb(25,25,25,0.9)',zIndex:1}}>
-                <i className="col-sm-4 col-2 display-3 themefont gradientText flex-wrap">FRISSON</i>           
+                <i className="col-2 display-3 themefont gradientText flex-wrap">FRISSON</i>           
                 <div className="col-6 mt-4"><Navigation /></div>
                 <div className="col-4 ">
                 <NavigationOption/>
@@ -48,8 +48,7 @@ export default function Main(){
           src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
           volume={0.5}
           // Try other props!
-        />
-        </div>
+        /></div>
             </div>
         </div>
     )
@@ -57,11 +56,10 @@ export default function Main(){
 function Navigation(){
     return (
         <>
-            <div className="col-sm-none input-group" style={{zIndex:1}}>
+            <div className="input-group" style={{zIndex:1}}>
                 <input type="text" className="form-control" placeholder="🎵 Explore Songs"/>
                 <btn className='btn btn-secondary material-symbols-outlined'>search</btn>
             </div>
-            <div className="col-lg-none fa-solid fa-search"></div>
         </>
     )
 }
