@@ -40,7 +40,7 @@ export default function Main(){
                 <a href="https://www.instagram.com/sanj.ay1237659/" className="gradientText col-4 text-center" style={{textDecoration:'none'}}><img src="Instagram.svg" style={{height:'7vh'}}/></a>
             </div>
             <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
-                {/* <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/> */}
+                <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/>
                 <ReactAudioPlayer src='https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=drive_link' controls className="col-11 " id='audio'/>
             </div>
         </div>
