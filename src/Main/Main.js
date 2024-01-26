@@ -41,6 +41,7 @@ export default function Main(){
             </div>
             <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
                 <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/>
+                <iframe src="https://lottie.host/embed/79fd354a-3f00-4965-8d90-a3401f362a3b/nvuCHqFCZM.json"></iframe>
                 <ReactAudioPlayer src='https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=drive_link' controls className="col-11 " id='audio'/>
             </div>
         </div>
