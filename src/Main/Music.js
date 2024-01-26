@@ -23,7 +23,7 @@ export function Card({songs=''}){
     const [favorite,setFavorite]=useState(false);
     return(
         <li className="col-2 m-3 card btn" style={{display:'flex' ,backgroundColor:'#181818',boxShadow:'0px 0px 5px grey'}} >
-                <img className="img-card img-bottom bg-dark rounded p-1" src='default.svg'/>
+                <img className="img-card img-bottom bg-dark rounded p-1" src='Default.svg'/>
                 <div className='card-title themefont gradientText'>{songs.author?undefined:'Song Author'}</div>
                 <div className="card-text themefont gradientText">{songs.name?undefined:'Song Name'}</div>
                 <div className="row">

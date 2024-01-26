@@ -32,7 +32,7 @@ export function ListSongs(songs=''){
      <div className="row mx-5 my-2 border-bottom align-items-center" >
         <div className="col-6 " >
             <div className="row">
-            <img className="col-4 img-fluid" src='default.svg' />
+            <img className="col-4 img-fluid" src='Default.svg' />
             <div className='col-8'>
             <h5 className='col-8 gradientText themefont'>Song : {songs.name!=undefined?songs.name:'SongName'}</h5>
             <h5 className="col-8 gradientText themefont">Author : {songs.author!=undefined?songs.name:'SongAuthor'}</h5>
