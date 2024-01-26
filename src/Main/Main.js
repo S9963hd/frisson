@@ -40,11 +40,8 @@ export default function Main(){
                 <a href="https://www.instagram.com/sanj.ay1237659/" className="gradientText col-4 text-center" style={{textDecoration:'none'}}><img src="Instagram.svg" style={{height:'7vh'}}/></a>
             </div>
             <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
-            <iframe src="https://lottie.host/embed/79fd354a-3f00-4965-8d90-a3401f362a3b/nvuCHqFCZM.json"></iframe>
-                <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/>
-                <audio  controls className="col-11 " id='audio'>
-                    <source src='https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=drive_link' />
-                </audio>
+                {/* <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/> */}
+                <ReactAudioPlayer src='https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=drive_link' controls className="col-11 " id='audio'/>
             </div>
         </div>
     )
