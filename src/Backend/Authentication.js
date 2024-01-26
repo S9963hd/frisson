@@ -28,7 +28,7 @@ app.post('/SignIn',async(req,res)=>{
 })
 app.get('/song',async(req,res)=>{
     let data;
-    await axios.get('https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=sharing').then(async result=>{console.log("Fetched SuccessFully");data=result.data}).catch(err=>console.log('Error At Fetching'));
+    await axios.get('https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=sharing').then(async result=>{console.log("Fetched SuccessFully");new Blob([result.data],{ type: response.headers['content-type'] })}).catch(err=>console.log('Error At Fetching'));
     res.status(200).send(data.title);
     console.log(data);
     await axios.post('http://localhost:3000/',data).then(result=>console.log("Sented")).catch(err=>console.log(err));

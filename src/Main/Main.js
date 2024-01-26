@@ -3,6 +3,7 @@ import Track from './Track';
 import { useNavigate } from 'react-router-dom';
 import MusicContent from './Music';
 import axios  from 'axios';
+import ReactAudioPlayer from 'react-audio-player';
 export default function Main(){
     const [song, setSong] = useState(null);
     useEffect(()=>{
@@ -40,10 +41,7 @@ export default function Main(){
             </div>
             <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
                 <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/>
-               <audio controls className="col-11">
-                <source src={song} />
-               </audio>
-               
+                <ReactAudioPlayer src='https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=drive_link' controls className="col-11" id='audio'/>
             </div>
         </div>
     )
