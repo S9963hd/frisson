@@ -92,14 +92,15 @@ input::-moz-range-thumb,::-webkit-slider-thumb {
 
 /* Style the progress bar */
 .react-audio-player audio::-webkit-media-controls-timeline {
-  background-color: red; /* Set your desired track color */
+  background-color:red; /* Set your desired track color */
 }
 
 .react-audio-player audio::-moz-range-track {
-  background-color: yellowgreen; /* Set your desired track color */
+  background-color:red; /* Set your desired track color */
 }
 
 .react-audio-player audio::-ms-fill-lower {
-  background-color: purple; /* Set your desired track color */
+  background-color: red; /* Set your desired track color */
 }
+
 /* Customize other styles as needed */

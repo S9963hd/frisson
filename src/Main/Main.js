@@ -41,7 +41,7 @@ export default function Main(){
             </div>
             <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
                 <img src="default.svg" className="col-1 img-fluid" style={{borderRight:'3px solid grey'}}/>
-                <ReactAudioPlayer src='https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=drive_link' controls className="col-11" id='audio'/>
+                <ReactAudioPlayer src='https://drive.google.com/file/d/1cDMBAE4r12s8qOXQgU6Mr_efp00mX8Uz/view?usp=drive_link' controls className="col-11 " id='audio'/>
             </div>
         </div>
     )
