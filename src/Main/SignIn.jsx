@@ -22,7 +22,7 @@ export default function SignIn() {
                 <label>Enter Password</label>
             </div>
             <h5 className="text-end gradientText" onClick={()=>setShow(!show)} style={{cursor:'pointer'}}>Show Password</h5>
-            <button className="btn gradientText col-2 border" type='submit' >Sign Up</button>
+            <button className="btn gradientText col-2 border " type='submit' >Sign Up</button>
         </form>
         </div>
       </div>

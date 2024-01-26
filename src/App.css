@@ -102,5 +102,10 @@ input::-moz-range-thumb,::-webkit-slider-thumb {
 .react-audio-player audio::-ms-fill-lower {
   background-color: red; /* Set your desired track color */
 }
+#signin:hover{
+  background-color:grey;
+  border:'2px solid white';
+  color:black;
+}
 
 /* Customize other styles as needed */
