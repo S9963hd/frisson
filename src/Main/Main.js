@@ -22,11 +22,11 @@ export default function Main(){
                     <SideOption/>
             </div>
             <div className="row justify-content-center">
-                <div className="col-4">
+                <div className="col-lg-4 col-sm-12">
                 <img src="Character1.svg"/>
                 </div>
-                <div className="col-6 align-self-center">
-                    <h1 className="themefont gradientText display-1 " style={{textShadow:'0px 50px 20px black'}}>Frisson Musical player Web Application 🎶</h1>
+                <div className="col-lg-6 col-sm-12 align-self-center">
+                    <h1 className="themefont gradientText text-center display-1 " style={{textShadow:'0px 50px 20px black'}}>Frisson Musical player Web Application 🎶</h1>
                 </div>
             </div>
             {/* <div className="row">
@@ -76,12 +76,12 @@ function NavigationOption(){
 function SideOption(){
     const navigate=useNavigate();
     return (
-        <ul className="container-fluid justify-content-around justify-content-center d-flex " style={{boxShadow:'0px 1px 10px white'}}>
-            <li className="col-2 btn bg-info h4 themefont gradientText material-symbols-outlined"><span className=" material-symbols-outlined">trending_up</span>popular Songs</li><span className="gradientText">|</span>
-            <li className="col-2 btn bg-info h4 themefont gradientText material-symbols-outlined" onClick={()=>navigate('/Playlist')}><span className="material-symbols-outlined">playlist_play</span>Playlist</li><span className="gradientText">|</span>
-            <li className="col-2 btn bg-info h4 themefont gradientText material-symbols-outlined" onClick={()=>navigate('/HubSong')}><span className=" material-symbols-outlined">upload</span>Hubbed Songs</li><span className="gradientText">|</span>
-            <li className="col-2 btn bg-info h4 themefont gradientText material-symbols-outlined"><span className=" material-symbols-outlined">new_releases</span>New Released</li><span className="gradientText">|</span>
-            <li className="col-2 btn bg-info h4 themefont gradientText material-symbols-outlined" onClick={()=>navigate('/LikedSongs')}><span className="material-symbols-outlined">favorite</span>Liked Songs</li>
+        <ul className="container-fluid justify-content-around justify-content-center d-flex " style={{boxShadow:'0px 1px 10px white',overflowX:'auto'}}>
+            <li className="col-lg-2 col-sm-4 btn bg-info h4 themefont gradientText material-symbols-outlined"><span className=" material-symbols-outlined">trending_up</span>popular Songs</li><span className="gradientText">|</span>
+            <li className="col-lg-2 col-sm-4 btn bg-info h4 themefont gradientText material-symbols-outlined" onClick={()=>navigate('/Playlist')}><span className="material-symbols-outlined">playlist_play</span>Playlist</li><span className="gradientText">|</span>
+            <li className="col-lg-2 col-sm-4 btn bg-info h4 themefont gradientText material-symbols-outlined" onClick={()=>navigate('/HubSong')}><span className=" material-symbols-outlined">upload</span>Hubbed Songs</li><span className="gradientText">|</span>
+            <li className="col-lg-2 col-sm-4 btn bg-info h4 themefont gradientText material-symbols-outlined"><span className=" material-symbols-outlined">new_releases</span>New Released</li><span className="gradientText">|</span>
+            <li className="col-lg-2 col-sm-4 btn bg-info h4 themefont gradientText material-symbols-outlined" onClick={()=>navigate('/LikedSongs')}><span className="material-symbols-outlined">favorite</span>Liked Songs</li>
         </ul>
     )
 }
