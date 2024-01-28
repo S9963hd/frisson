@@ -7,6 +7,7 @@ import UploadSong from './Main/UploadSong';
 import SignIn from './Main/SignIn';
 import LikedSongs from './Main/LikedSongs';
 import Playlist from './Main/Playlist';
+import PopularSongs from './Main/PopularSongs';
 function App() {
   useEffect(() => {
     // Hide the preloader when the DOM is fully loaded
@@ -32,6 +33,7 @@ function App() {
         <Route path="/SignIn" element={<SignIn/>}/>
         <Route path='/LikedSongs' element={<LikedSongs/>}/>
         <Route path='/Playlist' element={<Playlist/>}/>
+        <Route  path="/PopularSongs" element={<PopularSongs/>}/>
       </Routes>
     </BrowserRouter>
     </>
