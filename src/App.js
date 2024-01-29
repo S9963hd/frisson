@@ -8,23 +8,12 @@ import SignIn from './Main/SignIn';
 import LikedSongs from './Main/LikedSongs';
 import Playlist from './Main/Playlist';
 import PopularSongs from './Main/PopularSongs';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 function App() {
-  useEffect(() => {
-    // Hide the preloader when the DOM is fully loaded
-    document.getElementById('preloader').style.display = 'none';
-  }, []);
+ 
   return (
     <>
-    <div className="preloader" id="preloader">
-        <dotlottie-player
-          src="https://lottie.host/1532e766-8b0b-4507-ab2b-9f3315c49ecc/yc8NljHIfT.json"
-          background="transparent"
-          speed="1"
-          style={{ width: '300px', height: '300px' }}
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main/>}/>
@@ -36,6 +25,19 @@ function App() {
         <Route  path="/PopularSongs" element={<PopularSongs/>}/>
       </Routes>
     </BrowserRouter>
+    <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
+            <img src="Default.svg" className='col-1'/>
+            <div className="col-11">
+            <AudioPlayer
+            className="bg-dark col-11"
+            showSkipControls
+            mse
+            showFilledVolume
+            src="https://firebasestorage.googleapis.com/v0/b/frissson.appspot.com/o/copines.mp3?alt=media&token=7d4d3735-7fc2-41e2-a56d-f2adc84d0092"
+            volume={0.5}
+          // Try other props!
+        /></div>
+            </div>
     </>
   );
 

@@ -2,8 +2,6 @@ import React,{useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import MusicContent from './Music';
 import axios  from 'axios';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
 export default function Main(){
 //     const [song, setSong] = useState(null);
 // //     useEffect(()=>{
@@ -39,16 +37,7 @@ export default function Main(){
                 <a href="mailto:sanjaymajestic143@gmail.com" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-3" src="Mail.svg" style={{height:'6vh'}}/></a>
                 <a href="https://www.instagram.com/sanj.ay1237659/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-3" src="Instagram.svg" style={{height:'6vh'}}/></a>
                 <a href="https://github.com/S9963hd/frisson" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4" src="GitHub.svg" style={{height:'5vh'}}/></a>
-            </div>
-            <div className="row align-items-center" style={{position:'fixed',bottom:0,width:'100vw',backgroundColor:'#151515'}}>
-            <img src="Default.svg" className='col-1'/>
-            <div className="col-11">
-            <AudioPlayer
-            className="bg-dark col-11"
-          src="https://firebasestorage.googleapis.com/v0/b/frissson.appspot.com/o/copines.mp3?alt=media&token=7d4d3735-7fc2-41e2-a56d-f2adc84d0092"
-          volume={0.5}
-          // Try other props!
-        /></div>
+                <a href="https://www.linkedin.com/in/sanjay-s-610913285/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4" src="linkedIn.svg" style={{height:'4vh'}}/></a>
             </div>
         </div>
     )

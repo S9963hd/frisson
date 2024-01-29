@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import axios from 'axios';
+import GAuth from '../Backend/GAuth';
 export default function Login() {
     const [show,setShow]=useState(false);
   return (
@@ -23,6 +24,11 @@ export default function Login() {
             </div>
             <h5 className="text-end gradientText" onClick={()=>setShow(!show)} style={{cursor:'pointer'}}>Show Password</h5>
             <button className="btn gradientText col-2 border" type='submit' id="signup">Sign Up</button>
+            <hr className="text-white text-center display-1 m-3 mt-5"></hr>
+            <h4 className="gradientText themefont text-center ">SignIn With :</h4>
+            <div className="row justify-content-center">
+              <button type="button" className="col-4 text-white btn" onClick={()=>GAuth()}><i className="fa-brands fa-google display-6"></i></button>
+            </div>
           </form>
         </div>
       </div>
