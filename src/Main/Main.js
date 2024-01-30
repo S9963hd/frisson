@@ -39,6 +39,7 @@ export default function Main(){
                 <a href="https://github.com/S9963hd/frisson" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="GitHub.svg" style={{height:'5vh'}}/></a>
                 <a href="https://www.linkedin.com/in/sanjay-s-610913285/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="linkedIn.svg" style={{height:'4vh'}}/></a>
             </div>
+            <p className="gradientText themefont"> Frisson Music player is a public music player in cloud Where you can store your audio on Cloud ,So other peoples Can see your Audio for Absolutely Free.</p>
         </div>
     )
 }
