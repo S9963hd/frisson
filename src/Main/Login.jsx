@@ -23,7 +23,7 @@ export default function Login() {
                 <label>Enter Password</label>
             </div>
             <h5 className="text-end gradientText" onClick={()=>setShow(!show)} style={{cursor:'pointer'}}>Show Password</h5>
-            <button className="btn gradientText col-2 border" type='submit' id="signup">Sign Up</button>
+            <button className="btn gradientText col-3 border" type='submit' id="signup">Sign Up</button>
             <hr className="text-white text-center display-1 m-3 mt-5"></hr>
             <h4 className="gradientText themefont text-center ">SignIn With :</h4>
             <div className="row justify-content-center">
