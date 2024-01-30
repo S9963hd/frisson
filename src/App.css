@@ -67,7 +67,7 @@ input::-moz-range-thumb,::-webkit-slider-thumb {
 }
 .nav:hover{
   text-shadow: 0px 0px 5px white;
-  border-bottom: 5px solid white;
+  border-bottom: 4px solid white;
 }
 @keyframes fadeInOut {
   0% {
@@ -109,3 +109,8 @@ input::-moz-range-thumb,::-webkit-slider-thumb {
 }
 
 /* Customize other styles as needed */
+ .icon:hover{
+  height:6vh !important;
+  box-shadow:0px 0px 20px white;
+  border-radius:25%;
+}

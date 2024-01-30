@@ -34,10 +34,10 @@ export default function Main(){
                 <MusicContent/>
             </div>
             <div className="row justify-content-around" >
-                <a href="mailto:sanjaymajestic143@gmail.com" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-3" src="Mail.svg" style={{height:'6vh'}}/></a>
-                <a href="https://www.instagram.com/sanj.ay1237659/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-3" src="Instagram.svg" style={{height:'6vh'}}/></a>
-                <a href="https://github.com/S9963hd/frisson" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4" src="GitHub.svg" style={{height:'5vh'}}/></a>
-                <a href="https://www.linkedin.com/in/sanjay-s-610913285/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4" src="linkedIn.svg" style={{height:'4vh'}}/></a>
+                <a href="mailto:sanjaymajestic143@gmail.com" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="Mail.svg" style={{height:'4vh'}}/></a>
+                <a href="https://www.instagram.com/sanj.ay1237659/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="Instagram.svg" style={{height:'4vh'}}/></a>
+                <a href="https://github.com/S9963hd/frisson" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="GitHub.svg" style={{height:'5vh'}}/></a>
+                <a href="https://www.linkedin.com/in/sanjay-s-610913285/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="linkedIn.svg" style={{height:'4vh'}}/></a>
             </div>
         </div>
     )
