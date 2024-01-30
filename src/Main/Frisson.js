@@ -4,8 +4,13 @@ import AudioPlayer from 'react-h5-audio-player';
 import { Outlet,useNavigate } from 'react-router-dom';
 
 export default function Frisson(){
+    function hide(){
+        document.getElementById("preloader").style.display='none';
+        console.log("Done");
+    }
     const [current,setCurrent]=useState(0);
     const navigate=useNavigate();
+
     const song=["https://firebasestorage.googleapis.com/v0/b/frissson.appspot.com/o/Anbenum-MassTamilan.dev.mp3?alt=media&token=4284d9d0-7d06-4329-88cf-3be00629ab19",
     "https://firebasestorage.googleapis.com/v0/b/frissson.appspot.com/o/Badass-MassTamilan.dev.mp3?alt=media&token=abd5a483-7d05-45f2-aabe-76098dfbaea9",
     "https://firebasestorage.googleapis.com/v0/b/frissson.appspot.com/o/Bloody-Sweet-MassTamilan.dev.mp3?alt=media&token=3f64dd20-2d51-48b1-b1d1-cdcaf679330f",
@@ -28,14 +33,14 @@ export default function Frisson(){
             src={song[current]}
             volume={0.5}
           // Try other props!
-          onEnded={()=>{console.log("Song Ended");setCurrent((current+1))}}
-          onClickNext={()=>{console.log("Song Ended");setCurrent((current+1))}}
-          onClickPrevious={()=>{console.log("Song Ended");setCurrent((Math.abs(current-1)))}}
-       
+          onEnded={()=>{console.log((current+1)%7);setCurrent(((current+1)%7))}}
+          onClickNext={()=>{console.log("Song Ended"+((current+1)%7));setCurrent(((current+1)%7))}}
+          onClickPrevious={()=>{console.log("Song Ended"+((current+1)%7));setCurrent((Math.abs(current-1)))}}
+          onLoadedData={()=>hide()}
         />
-                {/* <div class="spinner-border text-secondary " role="status" style={{width:'10px',height:'10px'}}>
+            <div class="spinner-border text-secondary " role="status" style={{width:'10px',height:'10px'}} id='preloader'>
               <span class="visually-hidden">Loading...</span>
-            </div> */}
+            </div>
         </div>
         <div class="btn col-12 gradientText text-center material-symbols-outlined" onClick={()=>navigate('/DetailsOfAuthor')}>keyboard_double_arrow_down</div>
             </div>
