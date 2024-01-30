@@ -8,7 +8,7 @@ export default function Main(){
 // //     axios('http://localhost:5500/song').then(data=>console.log("Data Fetching")).catch(err=>console.log('Error At Fetching'));
 // // })
     return (
-        <div style={{position:'relative',height:'170vh',flexWrap:'wrap',width:'100vw'}} >
+        <div style={{position:'relative',height:'100vh',flexWrap:'wrap',width:'100vw'}} >
             <div className="row p-4 border-bottom" style={{position:'sticky',top:0,background:'rgb(25,25,25,1)',zIndex:1}}>
                 <i className="col-lg-2 col-sm-12 display-3 themefont gradientText flex-wrap text-center">FRISSON</i>           
                 <div className="col-lg-6 col-sm-2 mt-4"><Navigation /></div>
@@ -16,7 +16,7 @@ export default function Main(){
                 <NavigationOption/>
                 </div>
             </div >
-            <div className="row " style={{position:'sticky',top:'127px',background:'rgb(25,25,25,0.9)',zIndex:1}}>
+            <div className="row " style={{position:'sticky',top:'125px',background:'rgb(25,25,25,0.9)',zIndex:1}}>
                     <SideOption/>
             </div>
             <div className="row justify-content-center">
@@ -34,12 +34,18 @@ export default function Main(){
                 <MusicContent/>
             </div>
             <div className="row justify-content-around" >
-                <a href="mailto:sanjaymajestic143@gmail.com" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="Mail.svg" style={{height:'4vh'}}/></a>
-                <a href="https://www.instagram.com/sanj.ay1237659/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="Instagram.svg" style={{height:'4vh'}}/></a>
-                <a href="https://github.com/S9963hd/frisson" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="GitHub.svg" style={{height:'5vh'}}/></a>
-                <a href="https://www.linkedin.com/in/sanjay-s-610913285/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4 icon" src="linkedIn.svg" style={{height:'4vh'}}/></a>
+                <a href="mailto:sanjaymajestic143@gmail.com" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4" src="Mail.svg" style={{height:'4vh'}}/></a>
+                <a href="https://www.instagram.com/sanj.ay1237659/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4" src="Instagram.svg" style={{height:'4vh'}}/></a>
+                <a href="https://github.com/S9963hd/frisson" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4" src="GitHub.svg" style={{height:'5vh'}}/></a>
+                <a href="https://www.linkedin.com/in/sanjay-s-610913285/" className="gradientText col-1 text-center" style={{textDecoration:'none'}}><img className="col-4" src="linkedIn.svg" style={{height:'4vh'}}/></a>
             </div>
-            <p className="gradientText themefont"> Frisson Music player is a public music player in cloud Where you can store your audio on Cloud ,So other peoples Can see your Audio for Absolutely Free.</p>
+            <p className="gradientText themefont text-center m-5"> Frisson Music player is a public music player in cloud Where you can store your audio on Cloud ,So other peoples Can see your Audio for Absolutely Free.</p>
+            <div className="col m-5">
+                <h1>&nbsp;</h1>
+            </div>
+            <div className="col m-5">
+                <h1>&nbsp;</h1>
+            </div>
         </div>
     )
 }

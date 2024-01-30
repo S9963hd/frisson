@@ -28,7 +28,7 @@ export default function Frisson(){
             <AudioPlayer
             className="bg-dark col-11"
             showSkipControls
-            autoPlay
+            autoPlay={true}
             showFilledVolume
             src={song[current]}
             volume={0.5}
