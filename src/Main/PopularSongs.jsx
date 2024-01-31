@@ -13,7 +13,7 @@ export default function PopularSongs(){
             </div>
 
       </div>
-        <iframe width='100vw' height='60vh' src="https://lookerstudio.google.com/embed/reporting/f00c2651-290c-4016-8c65-96010fbe6b36/page/HueoD" frameborder="0" style="border:0" allowfullscreen style={{width:'100vw',height:'100vh'}} onLoad={hide}></iframe>
+        <iframe className="m-5 rounded" width='100vw' height='60vh' src="https://lookerstudio.google.com/embed/reporting/f00c2651-290c-4016-8c65-96010fbe6b36/page/HueoD" frameborder="0" style="border:0" allowfullscreen style={{width:'90vw',height:'80vh',boxShadow:'0px 0px 10px white'}} onLoad={hide}></iframe>
         </div>
         )
 }

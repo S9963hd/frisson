@@ -15,4 +15,7 @@ app.get("/login",(req,res)=>{
 app.get("/SongFetching",(req,res)=>{
     console.log("Song Fetching");
 })
+app.post('/Storage',(req,res)=>{
+    console.log("Song Storing");
+})
 app.listen(5500,'localhost',()=>console.log("Backbone Server Invoked"));
