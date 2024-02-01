@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import MusicContent from './Music';
+import { useAuth0 } from '@auth0/auth0-react';
 import axios  from 'axios';
 export default function Main(){
 //     const [song, setSong] = useState(null);
@@ -60,14 +61,22 @@ function Navigation(){
     )
 }
 function NavigationOption(){
+    const {loginWithRedirect,logout} =useAuth0();
+    const { user, isAuthenticated, isLoading } = useAuth0();
     const navigate=useNavigate();
     const [option,setOption]=useState(-1);
     return(
         <nav style={{flexwrap:'wrap'}} className="row justify-content-around  ">
             <div className="d-lg-none col-1"></div>
-            <a target='_blank' href="https://sanjaykce.w3spaces.com/" className={`col-3 pt-4 navOption nav themefont gradientText ${option==0?'border-bottom border-4':''}`} onClick={()=>setOption(0)} style={{textShadow:(option==0)?'0px 0px 5px white':''}}>AboutUs</a>
-            <a href="" className={`col-3 pt-4 navOption themefont gradientText nav ${option==1?'border-bottom border-4':''}`} onClick={()=>{setOption(1);setTimeout(navigate('/Login'),500)}} style={{textShadow:(option==1)?'0px 0px 5px white':''}} >SignIn</a>
-            <a href="" className={`col-3 pt-4 navOption themefont gradientText nav ${option==2?'border-bottom border-4':''}`} onClick={()=>{setOption(2);setTimeout(navigate('/SignIn'),500)}} style={{textShadow:(option==2)?'0px 0px 5px white':''}}>SignUp</a>
+            <a target='_blank' href="https://sanjaykce.w3spaces.com/" className={`col-4 pt-4 navOption nav themefont gradientText ${option==0?'border-bottom border-4':''}`} onClick={()=>setOption(0)} style={{textShadow:(option==0)?'0px 0px 5px white':''}}>AboutUs</a>
+            {   (isAuthenticated)?(
+                <div className="col-6 ">
+                    <span className={`col-5  pt-4 navOption themefont gradientText nav ${option==2?'border-bottom border-4':''}`} style={{cursor:'pointer',display:'inline-flex',textShadow:(option==2)?'0px 0px 5px white':''}} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>LogOut</span>
+                    <img src={user.picture} className="col-2 img-fluid rounded-circle pr-3"/>
+                    <span className="col-5  align-self-center gradientText themefont h5 m-3">{user.name}</span>
+                </div>
+          ):
+            <span className={`col-4 pt-4 navOption themefont gradientText nav ${option==2?'border-bottom border-4':''}`} onClick={()=>{setOption(2);loginWithRedirect()}} style={{cursor:'pointer',textShadow:(option==2)?'0px 0px 5px white':''}}>SignUp</span>}
         </nav>
     )
 }

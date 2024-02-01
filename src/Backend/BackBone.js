@@ -1,21 +1,12 @@
 let express=require('express');
+let mongoose=require('mongoose');
 let morgan=require('morgan');
 let cors=require('cors');
 let app=express();
 app.use(cors());
 app.use(morgan('dev'));
-import defaultSong from './SongFetch';
-import {Authentication,SongFetch} from './models'
-app.get("/",(req,res)=>{
-    console.log("ROOT DIR");
+app.use(express.json());
+app.post('/song',(req,res)=>{
+
 })
-app.get("/login",(req,res)=>{
-    console.log("Login Page");
-})
-app.get("/SongFetching",(req,res)=>{
-    console.log("Song Fetching");
-})
-app.post('/Storage',(req,res)=>{
-    console.log("Song Storing");
-})
-app.listen(5500,'localhost',()=>console.log("Backbone Server Invoked"));
+mongoose.connect("mongodb+srv://Sanjay:Sanjay123@validation.9hhx7jc.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true}).then(result=>{console.log("Connection Success");app.listen(5500,'localhost',()=>console.log("Lisstening"))}).catch(err=>console.log(err));

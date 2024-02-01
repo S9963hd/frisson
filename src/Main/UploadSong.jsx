@@ -6,8 +6,10 @@ import {ref,uploadBytesResumable,getDownloadURL} from 'firebase/storage';
 import songFetch from '../Backend/SongFetch';
 export default function UploadSong(){
     const [file,setFile]=useState('');
+    const [done,setDone]=useState(false);
+    const [progress,setProgress]=useState(0);
     return (
-        <div className="row justify-content-center align-items-center" style={{height:'100vh'}}>
+        <div className="row justify-content-center align-items-center" id="form" style={{height:'100vh'}}>
             <div className="col-6 p-5 bg-dark rounded" style={{boxShadow:'0px 0px 5px grey'}}>
             <h1 className="gradientText themefont text-center">HUB YOUR OWN PACE OF SONG</h1>
                     <form action="/hubSong" method='post' onSubmit={(e)=>{e.preventDefault();console.log(document.getElementById('songFile'));storageFun(file)}}>
@@ -26,7 +28,11 @@ export default function UploadSong(){
                         </div>
                         <button className="btn gradientText m-3 border-secondary text-center" >Upload</button>
                     </form>
+                    <div class="progress">
+  <div className={`${(progress>99)?'progress-bar progress-bar-success':'progress-bar progress-bar-danger'}`} role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style={{width:`${progress}%`}}></div>
+                    </div> 
             </div>
+            {(done)?<Alert/>:''}
         </div>
     )
 function storageFun(song){
@@ -44,6 +50,7 @@ function storageFun(song){
         // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         console.log('Upload is ' + progress + '% done');
+        setProgress(progress);
         switch (snapshot.state) {
           case 'paused':
             console.log('Upload is paused');
@@ -57,12 +64,12 @@ function storageFun(song){
         // Handle unsuccessful uploads
       }, 
       () => {
-        // Handle successful uploads on complete
-        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           console.log('File available at', downloadURL);
+          setDone(true);
         });
       }
     );
     }
+    
 }
