@@ -68,7 +68,7 @@ function NavigationOption(){
     return(
         <nav style={{flexwrap:'wrap'}} className="row justify-content-around  ">
             <div className="d-lg-none col-1"></div>
-            <a target='_blank' href="https://sanjaykce.w3spaces.com/" className={`col-4 pt-4 navOption nav themefont gradientText ${option==0?'border-bottom border-4':''}`} onClick={()=>setOption(0)} style={{textShadow:(option==0)?'0px 0px 5px white':''}}>AboutUs</a>
+            <a target='_blank' href="https://sanjayweb.vercel.app/" className={`col-4 pt-4 navOption nav themefont gradientText ${option==0?'border-bottom border-4':''}`} onClick={()=>setOption(0)} style={{textShadow:(option==0)?'0px 0px 5px white':''}}>AboutUs</a>
             {   (isAuthenticated)?(
                 <div className="col-6 ">
                     <span className={`col-5  pt-4 navOption themefont gradientText nav ${option==2?'border-bottom border-4':''}`} style={{cursor:'pointer',display:'inline-flex',textShadow:(option==2)?'0px 0px 5px white':''}} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>LogOut</span>
